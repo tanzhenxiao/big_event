@@ -23,7 +23,7 @@ $(function(){
         var data = {
         username: $('#form_reg [name = username]').val(),
         password: $('#form_reg [name = password]').val()}
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser',data ,function(res){
+        $.post('/api/reguser',data ,function(res){
             if(res.status !== 0){
                 return layer.msg(res.message);
             }
@@ -36,7 +36,7 @@ $(function(){
         var data = {
             username: $('#ipt_yh').val(),
             password: $('#ipt_mm').val()}
-        $.post('http://api-breakingnews-web.itheima.net/api/login',data,function(res){
+        $.post('/api/login',data,function(res){
             if(res.status !== 0){
                return console.log(res.message);
             }
